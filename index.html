@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+</head>
+<body onload="startTime()" >
+
+    <div class="header">
+
+        <div id="clock"></div>
+        
+        <div class="colorbuttons">
+            <button class="colors1" onclick="changeBackgroundColor1('black','white','#FFD700')"></button>
+            <button class="colors2" onclick="changeBackgroundColor2('white','black','rgb(249, 109, 0)')"></button>
+            <button class="colors3" onclick="changeBackgroundColor3('#3E64FF','rgb(236, 252, 255)','#BF81FF')"></button>
+        </div>
+        
+        <h1>To Do List</h1>
+        <span>Set your goals.</span>
+    </div>
+    <form action="">
+        <input type="text" placeholder="Type your Task" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class="fas fa-plus-circle fa-lg"></i>
+        </button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="incomplete">Incomplete</option>
+            </select>
+        </div>       
+    </form>
+
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/8fec2f8e0f.js" crossorigin="anonymous"></script>
+</body>
+</html>
